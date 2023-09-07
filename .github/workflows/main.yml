@@ -33,5 +33,5 @@ jobs:
           REMOTE_HOST: ${{ secrets.HOST }}
           # Remote user
           REMOTE_USER: ${{ secrets.USERNAME }}
-          SOURCE: "/home/runner/work/kaser/kaser/dist/*"
+          SOURCE: "/*"
           TARGET: "/site"
