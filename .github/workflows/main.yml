@@ -19,17 +19,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download artifacts
-      uses: actions/download-artifact@v2
-      with:
-        name: dist
+        uses: actions/download-artifact@v2
+        with:
+          name: dist
       - name: Deploy to Aliyun ECS
-      uses: easingthemes/ssh-deploy@v4.1.8
-      with:
-        # Private key part of an SSH key pair
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        # Remote host
-        REMOTE_HOST: ${{ secrets.HOST }}
-        # Remote user
-        REMOTE_USER: ${{ secrets.USERNAME }}
-        SOURCE: "dist/*"
-        TARGET: "/site"
+        uses: easingthemes/ssh-deploy@v4.1.8
+        with:
+          # Private key part of an SSH key pair
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          # Remote host
+          REMOTE_HOST: ${{ secrets.HOST }}
+          # Remote user
+          REMOTE_USER: ${{ secrets.USERNAME }}
+          SOURCE: "dist/*"
+          TARGET: "/site"
