@@ -14,18 +14,16 @@ jobs:
       with:
         name: dist
         path: dist/
-    - name: List files in current directory
-      run: ls
   deploy:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: List files in current directory
-        run: ls
       - name: Download artifacts
         uses: actions/download-artifact@v2
         with:
           name: dist
+      - name: List files
+        run: ls /home/runner/work/kaser/kaser
       - name: Deploy to Aliyun ECS
         uses: easingthemes/ssh-deploy@v4.1.8
         with:
@@ -35,5 +33,5 @@ jobs:
           REMOTE_HOST: ${{ secrets.HOST }}
           # Remote user
           REMOTE_USER: ${{ secrets.USERNAME }}
-          SOURCE: "dist/*"
+          SOURCE: "/home/runner/work/kaser/kaser/dist/*"
           TARGET: "/site"
