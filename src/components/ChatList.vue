@@ -1,13 +1,15 @@
 <template>
   <div class="main">
     <div id="msg-list">
-      <van-pull-refresh @refresh="onRefresh">
-        <van-list>
-          <van-cell class="msg-item" v-for="item in list" :key="item">
-            {{ item.content }}
-          </van-cell>
-        </van-list>
-      </van-pull-refresh>
+      <van-list>
+        <!-- <div class="msg-item" v-for="item in list" :key="item">
+          {{ item.role }}
+          {{ item.content }}
+        </div> -->
+        <van-cell class="msg-item" v-for="item in list" :key="item">
+          {{ item.content }}
+        </van-cell>
+      </van-list>
     </div>
     <van-search
       v-model="content"
@@ -61,14 +63,16 @@
     flex-direction: column;
     overflow: hidden;
     height: 100%;
+    padding-top: 40px;
+    padding-bottom: 120px;
+    box-sizing: border-box;
   }
   .van-search {
     border-radius: 8px;
-    flex: 0 0 50px;
-    /* position: absolute;
-    bottom: 24px;
-    right: 24px;
-    left: 24px */
+    position: fixed;
+    bottom: 60px;
+    left: 0;
+    right: 0;
   }
   .msg-item{
     margin-bottom: 24px;

@@ -14,7 +14,7 @@
     "@typescript-eslint/eslint-plugin": "^6.11.0",
     "axios": "^1.6.2",
     "typescript": "^5.2.2",
-    "vant": "^4.7.3",
+    "vant": "4",
     "vue": "^3.3.4"
   },
   "devDependencies": {

@@ -1803,10 +1803,10 @@ util-deprecate@^1.0.2:
   resolved "https://registry.npmmirror.com/util-deprecate/-/util-deprecate-1.0.2.tgz"
   integrity sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==
 
-vant@^4.7.3:
-  version "4.7.3"
-  resolved "https://registry.npmmirror.com/vant/-/vant-4.7.3.tgz#46cc14bff809e4bebb8651bab50b150ec49794d6"
-  integrity sha512-nb0pXxKSOaE9CvH//KozKDivqhjE4ZRvx1b/RCWFL4H3tZ5l+HhWtwK1yJx5AkO1Pm/IYQY86yZa1tums8DfsQ==
+vant@4:
+  version "4.8.0"
+  resolved "https://registry.npmmirror.com/vant/-/vant-4.8.0.tgz#46cc6cf77593abb1ccf023629b3f47e15aade1dd"
+  integrity sha512-JeEcSd1zt0+fcSo/wuyvhF+dUdd1IaaJmrG0BTiUvH/XcBJEUaTSSEaYG0V8iI38xUTUCuDG+TSfSoSeEwGVAQ==
   dependencies:
     "@vant/popperjs" "^1.3.0"
     "@vant/use" "^1.6.0"
